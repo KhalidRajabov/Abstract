@@ -27,8 +27,8 @@ namespace Abstract.Models
             int sq;
             if (num1>0)
             {
-                sq = num1 *4;
-                Console.WriteLine($"Area of your square is: '{num1*4}'       ({num1} x 4 = {sq})");
+                sq = num1 *2;
+                Console.WriteLine($"Area of your square is: '{num1*2}'       ({num1} x 2 = {sq})");
             }
             else
             {
