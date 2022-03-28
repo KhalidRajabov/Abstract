@@ -59,20 +59,7 @@ namespace Abstract
 
         }
 
-        static int GetInt(string name, int min = int.MinValue, int max = int.MaxValue)
-        {
-            int input;
-            do
-            {
-                Console.Write(name);
-                input = Convert.ToInt32(Console.ReadLine());
-                if (min > input || max < input)
-                {
-                    Console.WriteLine("Age must not be less than 1, and more than 120");
-                }
-            } while (input < min || input > max);
-            return input;
-        }
+      
 
 
     }
