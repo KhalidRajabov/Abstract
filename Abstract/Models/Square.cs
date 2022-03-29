@@ -16,24 +16,28 @@ namespace Abstract.Models
                 return _side; 
             }
             set 
-            {
+            {if (value < 0)
+                {
+                    Console.WriteLine("Side menfi ola bilmez");
+                    return;
+                }
+            
                 _side = value;
+
+                return;
             } 
+           
         }
 
-        public override void CalcArea(int num1, int num2)
+        public override void CalcArea()
         {
+            int result = Side * Side;
+            if (Side > 0)
+            {
 
-            int sq;
-            if (num1>0)
-            {
-                sq = num1 *2;
-                Console.WriteLine($"Area of your square is: '{num1*2}'       ({num1} x 2 = {sq})");
+                Console.WriteLine($"Square Area= {result}");
             }
-            else
-            {
-                Console.WriteLine("Side can not be negative");
-            }
+            
             
         }
     }

@@ -18,7 +18,16 @@ namespace Abstract.Models
             }
             set
             {
+                if (value < 0)
+                {
+                    Console.WriteLine("teref menfi ola bilmez");
+                    return;
+                    
+                }
                 _width = value;
+
+                
+
             }
         }
         public int Length
@@ -28,22 +37,26 @@ namespace Abstract.Models
                 return _length;
             }
             set 
-            { 
-                _length=value;
+            {
+                if (value < 0) 
+                {
+
+
+                    Console.WriteLine("teref menfi ola bilmez");
+                    return ;
+
+
+                }
+                _length = value;
             } 
         }
 
-        public override void CalcArea(int num1, int num2)
+        public override void CalcArea()
         {
-            int area;
-            if (num1 > 0 && num2 >0)
+            int result = _width * _length;
+            if (Width > 0 && Length > 0)
             {
-                Console.WriteLine($"Area of the rectangular is '{area = num1 * num2}'              ({num1} x {num2} = {area})");
-                
-            }
-            else
-            {
-                Console.WriteLine("Width or length can not be negative");
+                Console.WriteLine($"Rectangle Area={result}");
             }
         }
     }

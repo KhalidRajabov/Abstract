@@ -18,9 +18,7 @@ namespace Abstract
                 "0. Quit program");
 
             int select = Convert.ToInt32(Console.ReadLine());
-            int uSquare;
-            int width;
-            int length;
+           
             do
             {
                 switch (select)
@@ -28,35 +26,38 @@ namespace Abstract
                     case 1:
                         {
                             Console.Write("What is the length of square's side? ");
-                            uSquare = Convert.ToInt32(Console.ReadLine());
+                           
                             Square square = new Square();
-                            square.CalcArea(uSquare, 0);
+                            square.Side=int.Parse(Console.ReadLine());
+                            square.CalcArea();
+                           
+                          
                         }
                         break;
                     case 2:
                         {
+                            Rectangular area = new Rectangular();
                             Console.Write("What is the length of Rectangular's width? ");
-                            width= Convert.ToInt32(Console.ReadLine());
+                            area.Width= Convert.ToInt32(Console.ReadLine());
                             Console.Write("What is the length of Rectangular's length? ");
-                            length= Convert.ToInt32(Console.ReadLine());
+                            area.Length= Convert.ToInt32(Console.ReadLine());
 
-                            Rectangular area= new Rectangular();
-                            area.CalcArea(width, length);
+                          
+                            area.CalcArea();
                         }
                         break;
 
                     case 0:
                         {
-
+                            return;
+                         
                         }
-                        break;
-
-
+                     
                     default:
                         break;
                 }
-            } while (select < 0 || select > 4);
-
+            } while (select <0 || select >2 );
+            
         }
 
       

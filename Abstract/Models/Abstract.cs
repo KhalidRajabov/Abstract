@@ -9,7 +9,7 @@ namespace Abstract.Models
     abstract class Figure
     {
         
-        public abstract void CalcArea(int num1, int num2);
+        public abstract void CalcArea();
         
     }
 }
