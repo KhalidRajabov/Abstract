@@ -38,11 +38,11 @@ namespace Abstract.Models
             }
             set 
             {
-                if (value < 0) 
+                if (value <= 0) 
                 {
 
 
-                    Console.WriteLine("Length can not be negative");
+                    Console.WriteLine("Length can not be negative or zero");
                     return ;
 
 

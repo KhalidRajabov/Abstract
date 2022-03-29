@@ -57,7 +57,6 @@ namespace Abstract
                         break;
                 }
             } while (select <0 || select >2 );
-            
         }
 
       
