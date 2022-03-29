@@ -18,7 +18,7 @@ namespace Abstract.Models
             set 
             {if (value < 0)
                 {
-                    Console.WriteLine("Side menfi ola bilmez");
+                    Console.WriteLine("Side can not be negative");
                     return;
                 }
             

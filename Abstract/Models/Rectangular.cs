@@ -20,7 +20,7 @@ namespace Abstract.Models
             {
                 if (value < 0)
                 {
-                    Console.WriteLine("teref menfi ola bilmez");
+                    Console.WriteLine("Width can not be negativez");
                     return;
                     
                 }
@@ -42,7 +42,7 @@ namespace Abstract.Models
                 {
 
 
-                    Console.WriteLine("teref menfi ola bilmez");
+                    Console.WriteLine("Length can not be negative");
                     return ;
 
 
